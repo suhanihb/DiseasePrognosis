@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
+import joblib
 
 train = pd.read_csv("data/Training.csv")
 test = pd.read_csv("data/Testing.csv")
@@ -21,4 +22,7 @@ model.fit(trainSym, trainProg)
 # Predict
 testProgPred = model.predict(testSym)
 accuracy = accuracy_score(testProg, testProgPred)
-print("Accuracy: ", accuracy)
+print("Accuracy: ", accuracy) 
+
+# Save the trained model to a .pkl file
+joblib.dump(model, 'main.pkl')

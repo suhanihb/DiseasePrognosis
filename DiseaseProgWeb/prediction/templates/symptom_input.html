@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symptom Input</title>
+</head>
+<body>
+    <h1>Symptom Input</h1>
+    <form method="post" action="{% url 'symptom_input' %}">
+        {% csrf_token %}
+        <label for="symptoms">Select Symptoms:</label><br>
+        <input type="checkbox" name="symptoms" value="Symptom1"> Symptom 1<br>
+        <input type="checkbox" name="symptoms" value="Symptom2"> Symptom 2<br>
+        <input type="checkbox" name="symptoms" value="Symptom3"> Symptom 3<br>
+        <!-- Add more symptom checkboxes as needed -->
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
