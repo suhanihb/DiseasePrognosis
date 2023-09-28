@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagnosis</title>
+</head>
+<body>
+    <h1>Diagnosis Result</h1>
+    
+    {% if diagnosis %}
+        <p>Diagnosis: {{ diagnosis }}</p>
+    {% else %}
+        <p>No diagnosis available.</p>
+    {% endif %}
+    
+    <p><strong>Warning:</strong> Please note that this diagnosis prediction is for demonstration purposes only and may not be accurate. Consult a medical professional for a reliable diagnosis.</p>
+</body>
+</html>
