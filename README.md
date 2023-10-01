@@ -17,4 +17,5 @@ This Django-based web application provides an estimation of potential diseases b
 3. Click the "Submit" button to get an estimation of potential diseases based on your symptoms.
 
 <img width="999" alt="Screenshot 2023-10-01 at 4 10 36 PM" src="https://github.com/suhanihb/DiseasePrognosis/assets/117537786/2ea196f0-ed78-43ce-b442-258a79b2baa5">
-<img width="409" alt="Screenshot 2023-10-01 at 4 11 39 PM" src="https://github.com/suhanihb/DiseasePrognosis/assets/117537786/6c54b425-c971-4fe6-ad5a-b3475df0b6ef"><img width="603" alt="Screenshot 2023-10-01 at 4 12 07 PM" src="https://github.com/suhanihb/DiseasePrognosis/assets/117537786/af05e436-638e-4bdc-8520-9731327e7832">
+<img width="409" alt="Screenshot 2023-10-01 at 4 11 39 PM" src="https://github.com/suhanihb/DiseasePrognosis/assets/117537786/6c54b425-c971-4fe6-ad5a-b3475df0b6ef">
+<img width="603" alt="Screenshot 2023-10-01 at 4 12 07 PM" src="https://github.com/suhanihb/DiseasePrognosis/assets/117537786/af05e436-638e-4bdc-8520-9731327e7832">
