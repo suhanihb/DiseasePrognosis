@@ -21,8 +21,8 @@ model.fit(trainSym, trainProg)
 
 # Predict
 testProgPred = model.predict(testSym)
-accuracy = accuracy_score(testProg, testProgPred)
-print("Accuracy: ", accuracy) 
+#accuracy = accuracy_score(testProg, testProgPred)
+#print("Accuracy: ", accuracy)
 
 # Save the trained model to a .pkl file
 joblib.dump(model, 'main.pkl')

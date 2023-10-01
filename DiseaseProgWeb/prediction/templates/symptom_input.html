@@ -1,19 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Symptom Input</title>
-</head>
-<body>
-    <h1>Symptom Input</h1>
-    <form method="post" action="{% url 'symptom_input' %}">
-        {% csrf_token %}
-        <label for="symptoms">Select Symptoms:</label><br>
-        <input type="checkbox" name="symptoms" value="Symptom1"> Symptom 1<br>
-        <input type="checkbox" name="symptoms" value="Symptom2"> Symptom 2<br>
-        <input type="checkbox" name="symptoms" value="Symptom3"> Symptom 3<br>
-        <!-- Add more symptom checkboxes as needed -->
-        <br>
-        <input type="submit" value="Submit">
-    </form>
-</body>
-</html>
+{% extends 'base.html' %} {% block title %} Symptom Input {% endblock %}
+
+{% block content %}
+
+<br>
+<title>Symptom Input</title>
+<h1>Symptom Input</h1>
+<form method="post" action="{% url 'symptom_input' %}">
+    {% csrf_token %}
+    <input type="text" id="symptom-search" placeholder="Search symptoms">
+    <input type="submit" value="Submit">
+    <div id="symptom-list"><br>
+        {% for symptom in symptoms %}
+            <label for="{{ symptom }}" style="display: block; margin-bottom: 5px;">
+                <input type="checkbox" id="{{ symptom }}" name="symptoms" value="{{ symptom }}"> {{ symptom }}
+            </label>
+        {% endfor %}
+    </div>
+</form>
+
+<script>
+    document.getElementById('symptom-search').addEventListener('input', function () {
+        var searchInput = this.value.toLowerCase();
+        var checkboxes = document.querySelectorAll('#symptom-list input[type="checkbox"]');
+        checkboxes.forEach(function (checkbox) {
+            var label = checkbox.parentElement;
+            var symptomName = label.textContent.toLowerCase();
+            var words = symptomName.split(' ');
+            var match = words.some(function (word) {
+                return word.startsWith(searchInput);
+            });
+            if (match) {
+                label.style.display = 'block';
+            } else {
+                label.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+{% endblock %}
