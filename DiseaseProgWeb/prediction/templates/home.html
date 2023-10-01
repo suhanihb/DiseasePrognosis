@@ -1,4 +1,17 @@
 {% extends 'base.html' %} {% block title %} Home Page {% endblock %}
+
 {% block content %}
-<p>this is the home page</p>
+
+<div><br>
+    <h1>Welcome to the Disease Predictor</h1>
+    <p>This disease predictor is a tool designed to provide you with an estimation based on your reported symptoms. Here's how it works:</p>
+    <ul>
+        <li><strong>Data Source:</strong> Our Symptom Checker is built upon data obtained from <a href="https://www.kaggle.com/code/anushreek15/disease-prediction/notebook" target="_blank">Kaggle</a>, a platform known for its vast collection of datasets. This data serves as a foundation for our predictions.</li>
+        <li><strong>Machine Learning:</strong> We leverage principles of machine learning, specifically utilizing a logistic regression model, to analyze your symptoms and generate estimations. While our model is trained to make predictions, it's essential to understand that this tool does not provide an official diagnosis.</li>
+        <li><strong>Disclaimer:</strong> It's important to note that the results obtained through our Symptom Checker are not a substitute for professional medical advice. We highly recommend consulting with a healthcare provider for a formal diagnosis and treatment recommendations. Our tool is intended for informational purposes only.</li>
+        <li><strong>Getting Started:</strong> To access the Symptom Checker and receive an estimation based on your symptoms, simply click on the "Check Symptoms" tab. You'll be guided through a series of questions related to your symptoms, and our tool will provide you with an estimation based on the information provided.</li>
+    </ul>
+    <p>Your health is important, and while our Symptom Checker can provide some insights, we always encourage you to consult with a healthcare professional for any health concerns you may have.</p>
+</div>
+
 {% endblock %}
