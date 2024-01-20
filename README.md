@@ -6,8 +6,8 @@ This Django-based web application provides an estimation of potential diseases b
 
 ## Installation
 1. Clone the repository: ```git clone https://github.com/suhanihb/DiseasePrognosis.git```
-2. Change to the website directory: ```cd DiseaseProgWeb```
-3. Install project dependencies: `pip install -r requirements.txt`
+2. Install project dependencies: `pip install -r requirements.txt`
+3. Change to the website directory: ```cd DiseaseProgWeb```
 4. Run the development server: `Python3 manage.py runserver`
 5. Access the application locally in your web browser: `http://localhost:8000`
 
